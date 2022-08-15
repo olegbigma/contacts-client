@@ -1,15 +1,114 @@
 <!doctype html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset='UTF-8'>
+  <meta name='viewport'
+        content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Document</title>
+  <style>
+      body,
+      html,
+      ul,
+      li,
+      p,
+      h1,
+      h2 {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+      }
+
+      a {
+          color: inherit;
+          text-decoration: none;
+      }
+
+      :root {
+          --color-primary-500: #AA3939;
+          --color-primary-100: #D46A6A;
+      }
+
+      body {
+          font-family: Arial, sans-serif;
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+      }
+
+      .contacts {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 10px;
+          background-color: var(--color-primary-500);
+      }
+
+      .contact {
+          background-color: var(--color-primary-100);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px;
+      }
+
+      .form {
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          background-color: var(--color-primary-500);
+      }
+
+      .input {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          background-color: var(--color-primary-100);
+          padding: 10px;
+      }
+  </style>
 </head>
 <body>
 
-<script src="src/index.js" type="module"></script>
-<script src="src/check.js" type="module"></script>
+<h1 class='title'>Contacts app</h1>
+
+<ul class='contacts'>
+  <li class='contact'>
+    <h2 class='contact__title'>
+      Wife
+    </h2>
+    <a href='tel:+380111111111'>+380111111111</a>
+  </li>
+  <li class='contact'>
+    <h2 class='contact__title'>
+      Wife
+    </h2>
+    <a href='tel:+380111111111'>+380111111111</a>
+  </li>
+</ul>
+
+<form action='' class='form'>
+  <label class='input'>
+    Contact name
+    <input type='text' class='input__input' name='name'>
+    <span class='input__message'></span>
+  </label>
+  <label class='input'>
+    Contact number
+    <input type='text' class='input__input' name='number'>
+    <span class='input__message'></span>
+  </label>
+  <button type='submit'>
+    Send
+  </button>
+</form>
+
+<script src='src/index.js' type='module'></script>
+<script src='src/check.js' type='module'></script>
 </body>
 </html>
